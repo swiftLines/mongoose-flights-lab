@@ -23,8 +23,17 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  res.render('flights/show', {
+    seat: seat,
+    price: price,
+    title: 'Ticket Detail',
+  })
+}
+
 export {
   newFlights as new,
   create,
-  index
+  index,
+  show
 }
