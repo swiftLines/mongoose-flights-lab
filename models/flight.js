@@ -11,7 +11,7 @@ const flightSchema = new Schema({
 })
 
 // compile the schema into a model and export it
-const Flight = mongoose.model('Flight', movieSchema)
+const Flight = mongoose.model('Flight', flightSchema)
 
 export {
   Flight
