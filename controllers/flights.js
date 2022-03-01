@@ -24,10 +24,17 @@ function create(req, res) {
 }
 
 function show(req, res) {
-  res.render('flights/show', {
-    seat: seat,
-    price: price,
-    title: 'Ticket Detail',
+  console.log('in show!'),
+  Flight.findById(req.params.id, function(err, flight) {
+    res.render('flights/show', {
+      // seat: {
+      // type: String,
+      // match: /[A-F][1-9]\d?/
+      // },
+      // price: price,
+      flight: flight,
+      title: 'Ticket Detail',
+    })
   })
 }
 
