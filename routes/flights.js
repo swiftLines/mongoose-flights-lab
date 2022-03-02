@@ -1,6 +1,7 @@
 import { Router } from 'express'
-const router = Router()
 import * as flightsCtrl from '../controllers/flights.js'
+
+const router = Router()
 
 /* GET flights listing. */
 router.get('/', flightsCtrl.index)
@@ -11,6 +12,8 @@ router.get('/:id', flightsCtrl.show)
 
 // POST /flights
 router.post('/', flightsCtrl.create)
+// POST /flights/:id/tickets
+router.post('/:id/tickets', flightsCtrl.createTicket)
 
 export {
   router
