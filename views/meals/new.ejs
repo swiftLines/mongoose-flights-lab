@@ -1,0 +1,19 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/performers/style.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form id="add-meal-form" action="/meals" method="POST">
+    <input type="text" name="name" id="name-input">
+    <button type="submit">Add Meal</button>
+  </form>
+  <p>
+    Please first ensure that the meal is not listed below
+      <% meals.forEach(meal => { %>
+        <%= meal.name %>
+      <% }) %>
+  </p>
+</main>
+
+<%- include('../partials/footer') %>

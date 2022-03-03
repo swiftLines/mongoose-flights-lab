@@ -47,6 +47,7 @@ function createTicket(req, res) {
   })
 }
 
+
 export {
   newFlights as new,
   create,

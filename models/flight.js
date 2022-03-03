@@ -36,7 +36,7 @@ const flightSchema = new Schema({
     required: true
   },
   tickets: [ticketSchema],
-  meals: [{ type= Schema.Types.ObjectId, ref: "Meal"}]
+  meals: [{ type: Schema.Types.ObjectId, ref: "Meal"}]
 })
 
 // compile the schema into a model and export it
