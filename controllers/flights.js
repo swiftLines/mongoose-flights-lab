@@ -51,11 +51,22 @@ function createTicket(req, res) {
   })
 }
 
+function addToMeals(req, res) {
+  console.log('aaaand theeeeeen')
+  Flight.findById(req.params.id, function(err, flight) {
+    flight.meals.push(req.body.mealId)
+    flight.save(function(err) {
+      res.redirect(`/flights/${flight._id}`)
+    })
+  })
+}
+
 
 export {
   newFlights as new,
   create,
   index,
   show,
-  createTicket
+  createTicket,
+  addToMeals
 }
