@@ -11,7 +11,6 @@ function newMeal(req, res) {
 
 function create(req, res) {
   Meal.create(req.body, function(err, meal) {
-
     res.redirect('/meals/new')
   })
 }

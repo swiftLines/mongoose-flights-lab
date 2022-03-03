@@ -5,12 +5,15 @@ function index(req, res) {
     res.render('flights/index', {
       err: err,
       flights: flights,
+      title: 'Flights'
     })
   })
 }
 
 function newFlights(req, res) {
-  res.render('flights/new')
+  res.render('flights/new', {
+    title: 'Add Flight'
+  })
 }
 
 function create(req, res) {
